@@ -1,0 +1,158 @@
+html{scroll-behavior:smooth}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:active,a:checked{
+    color: blue;
+}
+
+.logo{
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+}
+
+.container{
+    /* background-color: #D0A2F7; */
+    height: 100%;
+}
+
+.nav{
+    background-color: #222428;
+    color: white;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.main{
+    padding-top: 50px;
+    height: 100%;
+}
+
+#sidebar{
+    background-color: #222428;
+    color: white;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
+    animation: width 2s linear;
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar{
+    width: 70px;
+}
+
+.sidebar span{
+    display:none;
+    visibility: hidden;
+    height: 0;
+}
+
+.sidebar.active svg{
+    display: block;
+    float: left;
+}
+
+.sidebar.active span{
+    display:inline;
+    visibility: visible;
+    margin: 10px;
+}
+
+.sidebar #profileBtn{
+    margin-bottom: 90px;
+}
+
+.sidebar.active #profileBtn{
+    margin: 40px 30px;
+    margin-bottom: 90px;
+}
+
+.sidebar .sidebar-element{
+    margin: 20px 0px;
+}
+
+.sidebar.active .sidebar-element{
+    margin: 20px;
+}
+
+.sidebar.active{
+    width: 250px;
+}
+
+#active-btn{
+    cursor: pointer;
+    user-select: none;
+}
+
+.content.active{
+    margin: 20px 270px;
+    width: 80%;
+}
+
+.content{
+    width: 90%;
+    margin: 20px 100px;
+}
+
+.rectangle-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background-color: white;
+    /* border-radius: 50px; */
+    margin: 20px 0px;
+    padding: 0px 30px;
+}
+
+.rectangle-main img{
+    height: 100%;
+    /* border-radius: 50px; */
+    width: 30%;
+}
+
+.rectangle-details{
+    margin: auto;
+    width: 45%;
+    font-size: 18px;
+}
+
+.playBtn button{
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    height: 50px;
+    width: 150px;
+    background-color: black;
+    color: white;
+}
+
+.musicView{
+    height: 200px;
+    margin-bottom: 100px;
+}
+
+.musicView img{
+    height: 100%;
+    width: 100%;
+}
+

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initialile-scale=1.0">
+    <title>BeatBox</title>
+    <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profilePage.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="artistcard.css">
+    <link rel="stylesheet" href="player.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="buttons">
+                <div id="back"></div>
+                <div id="next"></div>
+                <div class="logo">
+                    <h1>BeatBox</h1>
+                </div>
+                <div class="profile">
+                    <div class="profilePhoto"></div>
+                    <!-- <div class="name"></div> -->
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div id="sidebar" class="sidebar active">
+                <div class="sidebar-main">
+                    <div class="sidebar-element" id="active-btn">
+                        <!-- <i class="bi bi-list"></i> -->
+                        <i class="bi bi-music-note-list"></i>
+                        <span>Music</span>
+                    </div>
+                    <div class="home">
+                        <a href="#home" class="sidebar-element">
+                            <i class="bi bi-house-door"></i>
+                            <span>Home</span>
+                        </a>
+                    </div>
+                    <div class="sidebar-element">
+                        <a href="#recommendation">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="23" height="23"
+                            viewBox="0 0 48 48">
+                            <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-miterlimit="10" stroke-width="3"
+                                d="M40.5,30.5v6c0,2.2-1.8,4-4,4h-25c-2.2,0-4-1.8-4-4V24.3"></path>
+                            <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-miterlimit="10" stroke-width="3"
+                                d="M7.5,17.5v-6c0-2.2,1.8-4,4-4h25c2.2,0,4,1.8,4,4v12.2"></path>
+                            <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-miterlimit="10" stroke-width="3"
+                                d="M28.3,16.2c-1.8,0-3.4,1-4.3,2.5c-0.8-1.5-2.4-2.5-4.3-2.5c-2.7,0-4.9,2.2-4.9,4.9c0,6.1,7.5,10.7,9.2,10.7	s9.2-5.1,9.2-10.7C33.2,18.4,31,16.2,28.3,16.2z">
+                            </path>
+                            </svg>
+                            <span>For You</span>
+                        </a>
+                    </div>
+                    <div class="sidebar-element">
+                        <a href="#artists">
+                            <i class="bi bi-file-person"></i>
+                            <span>Artists</span>
+                        </a>
+                    </div>
+                    <div class="sidebar-element">
+                        <a href="#genre">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2 9C2 5.70017 2 4.05025 3.02513 3.02513C4.05025 2 5.70017 2 9 2H11C14.2998 2 15.9497 2 16.9749 3.02513C18 4.05025 18 5.70017 18 9V11C18 14.2998 18 15.9497 16.9749 16.9749C15.9497 18 14.2998 18 11 18H9C5.70017 18 4.05025 18 3.02513 16.9749C2 15.9497 2 14.2998 2 11V9Z"
+                                    stroke="#fff" stroke-width="1.5" />
+                                <path
+                                    d="M18.2383 7C19.5732 7.08138 20.4232 7.30467 21.036 7.91738C22 8.88143 22 10.433 22 13.5363V15.4171C22 18.5203 22 20.0719 21.036 21.036C20.0719 22 18.5203 22 15.4171 22H13.5363C10.433 22 8.88143 22 7.91738 21.036C7.30467 20.4232 7.08138 19.5732 7 18.2383"
+                                    stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+                                <path
+                                    d="M11 12V6C11.2222 6.4 11.4 8.08 13 8.4M11 12C11 13.1046 10.1046 14 9 14C7.89543 14 7 13.1046 7 12C7 10.8954 7.89543 10 9 10C10.1046 10 11 10.8954 11 12Z"
+                                    stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg> 
+                            <span>Genre</span>
+                        </a>
+                    </div>
+                    <div class="sidebar-element">
+                        <a href="#podcast">
+                            <i class="bi bi-mic"></i>
+                            <span>Podcasts</span>
+                        </a>
+                    </div>
+                    <!-- <div class="sidebar-element">
+                        <a href="#playlist">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2 9C2 5.70017 2 4.05025 3.02513 3.02513C4.05025 2 5.70017 2 9 2H11C14.2998 2 15.9497 2 16.9749 3.02513C18 4.05025 18 5.70017 18 9V11C18 14.2998 18 15.9497 16.9749 16.9749C15.9497 18 14.2998 18 11 18H9C5.70017 18 4.05025 18 3.02513 16.9749C2 15.9497 2 14.2998 2 11V9Z"
+                                    stroke="#fff" stroke-width="1.5" />
+                                <path
+                                    d="M18.2383 7C19.5732 7.08138 20.4232 7.30467 21.036 7.91738C22 8.88143 22 10.433 22 13.5363V15.4171C22 18.5203 22 20.0719 21.036 21.036C20.0719 22 18.5203 22 15.4171 22H13.5363C10.433 22 8.88143 22 7.91738 21.036C7.30467 20.4232 7.08138 19.5732 7 18.2383"
+                                    stroke="#fff" stroke-width="1.5" stroke-linecap="round" />
+                                <path
+                                    d="M11 12V6C11.2222 6.4 11.4 8.08 13 8.4M11 12C11 13.1046 10.1046 14 9 14C7.89543 14 7 13.1046 7 12C7 10.8954 7.89543 10 9 10C10.1046 10 11 10.8954 11 12Z"
+                                    stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <span>Playlists</span>
+                        </a>
+                    </div> -->
+                </div>
+                <hr>
+                <!-- <div id="profileBtn">
+                    <a href="ProfilePage.html">
+                        <i class="bi bi-person-circle"></i>
+                        <span>Profile</span>
+                    </a>
+                </div> -->
+
+                <div class="musicView">
+                    <div class="song-poster">
+                        <img src="" class="viewImage">
+                    </div>
+                    <div class="song-name"></div>
+                    <div class="artist-name"></div>
+                </div>
+
+            </div>
+            <div id="content" class="content active">
+                <div class="main-card" id="home">
+                    <h1>New releases</h1>
+                    <div class="card-div">
+                        <div class="card">
+                            <img src="" class="cardImg">
+                            <div class="card-footer">
+                                <div class="details">
+                                    <span class="name">Chaleya</span>
+                                    <br>
+                                    <span class="artist">Arjit Singh</span>
+                                </div>
+                                <button id="play">
+                                    <i class="bi bi-play-circle"></i>
+                                    <!-- <i class="bi bi-play"></i> -->
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="" class="cardImg">
+                            <div class="card-footer">
+                                <div class="details">
+                                    <span class="name">Chandni</span>
+                                    <br>
+                                    <span class="artist">Jaani</span>
+                                </div>
+                                <button id="play">
+                                    <i class="bi bi-play-circle"></i>
+                                    <!-- <i class="bi bi-play"></i> -->
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="" class="cardImg">
+                            <div class="card-footer">
+                                <div class="details">
+                                    <span class="name">Aadat</span>
+                                    <br>
+                                    <span class="artist">Atif Aslam</span>
+                                </div>
+                                <button id="play">
+                                    <i class="bi bi-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="" class="cardImg">
+                            <div class="card-footer">
+                                <div class="details">
+                                    <span class="name">Kalastar</span>
+                                    <br>
+                                    <span class="artist">Yo Yo Honey Singh</span>
+                                </div>
+                                <button id="play">
+                                    <i class="bi bi-play-circle"></i>
+                                    <!-- <i class="bi bi-play"></i> -->
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-card" id="recommendation">
+                    <h1>Recommended</h1>
+                    <div class="card-div">
+                        <div class="card">
+                            <img src="" class="cardImg">
+                            <div class="card-footer">
+                                <div class="details">
+                                    <span class="name">One Love</span>
+                                    <br>
+                                    <span class="artist">Shubh</span>
+                                </div>
+                                <button id="play">
+                                    <i class="bi bi-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="" class="cardImg">
+                            <div class="card-footer">
+                                <div class="details">
+                                    <span class="name">Blue Eyes</span>
+                                    <br>
+                                    <span class="artist">Yo Yo Honey Singh</span>
+                                </div>
+                                <button id="play">
+                                    <i class="bi bi-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="" class="cardImg">
+                            <div class="card-footer">
+                                <div class="details">
+                                    <span class="name">Softly</span>
+                                    <br>
+                                    <span class="artist">Karan Aujla</span>
+                                </div>
+                                <button id="play">
+                                    <i class="bi bi-play-circle"></i>
+                                    <!-- <i class="bi bi-play"></i> -->
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="" class="cardImg">
+                            <div class="card-footer">
+                                <div class="details">
+                                    <span class="name">Faasle</span>
+                                    <br>
+                                    <span class="artist">Aditya Rikhari</span>
+                                </div>
+                                <button id="play">
+                                    <i class="bi bi-play-circle"></i>
+                                    <!-- <i class="bi bi-play"></i> -->
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+                <div class="history"></div>
+                <div id="artists" class="circle-box">
+                    <h1>Some of Your favourite Artists</h1>
+                    <div class="circle-card-main">
+                        <div class="circle-card">
+                            <img src="https://i.pinimg.com/originals/3a/a3/18/3aa31828aebe038cd5c2ad4b22ee2221.jpg">
+                            <div class="circle-details">
+                                <div class="name">Arjit Singh</div>
+                                <button id="art-play">
+                                    <i class="bi bi-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="circle-card">
+                            <img src="https://i.pinimg.com/originals/3a/a3/18/3aa31828aebe038cd5c2ad4b22ee2221.jpg">
+                            <div class="circle-details">
+                                <div class="name">Arjit Singh</div>
+                                <button id="art-play">
+                                    <i class="bi bi-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="circle-card">
+                            <img src="https://i.pinimg.com/originals/3a/a3/18/3aa31828aebe038cd5c2ad4b22ee2221.jpg">
+                            <div class="circle-details">
+                                <div class="name">Arjit Singh</div>
+                                <button id="art-play">
+                                    <i class="bi bi-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="circle-card">
+                            <img src="https://i.pinimg.com/originals/3a/a3/18/3aa31828aebe038cd5c2ad4b22ee2221.jpg">
+                            <div class="circle-details">
+                                <div class="name">Arjit Singh</div>
+                                <button id="art-play">
+                                    <i class="bi bi-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="circle-card">
+                            <img src="https://i.pinimg.com/originals/3a/a3/18/3aa31828aebe038cd5c2ad4b22ee2221.jpg">
+                            <div class="circle-details">
+                                <div class="name">Arjit Singh</div>
+                                <button id="art-play">
+                                    <i class="bi bi-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div id="genre" class="circle-box">
+                    <h1>Genre</h1>
+                    <div class="circle-card-main">
+                        <div class="circle-card">
+                            <img src="https://i.pinimg.com/originals/3a/a3/18/3aa31828aebe038cd5c2ad4b22ee2221.jpg">
+                            <div class="circle-details">
+                                <div class="name">Arjit Singh</div>
+                                <button id="art-play">
+                                    <i class="bi bi-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="circle-card">
+                            <img src="https://i.pinimg.com/originals/3a/a3/18/3aa31828aebe038cd5c2ad4b22ee2221.jpg">
+                            <div class="circle-details">
+                                <div class="name">Arjit Singh</div>
+                                <button id="art-play">
+                                    <i class="bi bi-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="circle-card">
+                            <img src="https://i.pinimg.com/originals/3a/a3/18/3aa31828aebe038cd5c2ad4b22ee2221.jpg">
+                            <div class="circle-details">
+                                <div class="name">Arjit Singh</div>
+                                <button id="art-play">
+                                    <i class="bi bi-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="circle-card">
+                            <img src="https://i.pinimg.com/originals/3a/a3/18/3aa31828aebe038cd5c2ad4b22ee2221.jpg">
+                            <div class="circle-details">
+                                <div class="name">Arjit Singh</div>
+                                <button id="art-play">
+                                    <i class="bi bi-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="circle-card">
+                            <img src="https://i.pinimg.com/originals/3a/a3/18/3aa31828aebe038cd5c2ad4b22ee2221.jpg">
+                            <div class="circle-details">
+                                <div class="name">Arjit Singh</div>
+                                <button id="art-play">
+                                    <i class="bi bi-play-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="podcast" id="podcast">
+                    <div class="rectangle-main">
+                        <img src="https://www.buzzincontent.com/uploads/large/Podcast-V7.jpg">
+                        <div class="rectangle-details">
+                            <div class="name">
+                                <h4>EatSure presents The RCB Podcast</h4>
+                            </div>
+                            <div class="description">
+                                <p>EatSure is proud to partner with Royal Challengers Bangalore for The RCB Podcast — Game Changers.</p>
+                            </div>
+                            <div class="author">
+                                <p>By Royal Challengers Bangalore</p>
+                            </div>
+                        </div>
+                        <div class="playBtn">
+                            <button>
+                                <i class="bi bi-play-circle"></i>
+                                Play
+                            </button>
+                        </div>
+                    </div>
+                    <div class="rectangle-main">
+                        <img src="https://www.buzzincontent.com/uploads/large/Podcast-V7.jpg">
+                        <div class="rectangle-details">
+                            <div class="name">
+                                <h4>EatSure presents The RCB Podcast</h4>
+                            </div>
+                            <div class="description">
+                                <p>EatSure is proud to partner with Royal Challengers Bangalore for The RCB Podcast — Game Changers.</p>
+                            </div>
+                            <div class="author">
+                                <p>By Royal Challengers Bangalore</p>
+                            </div>
+                        </div>
+                        <div class="playBtn">
+                            <button>
+                                <i class="bi bi-play-circle"></i>
+                                Play
+                            </button>
+                        </div>
+                    </div>
+                    <div class="rectangle-main">
+                        <img src="https://www.buzzincontent.com/uploads/large/Podcast-V7.jpg">
+                        <div class="rectangle-details">
+                            <div class="name">
+                                <h4>EatSure presents The RCB Podcast</h4>
+                            </div>
+                            <div class="description">
+                                <p>EatSure is proud to partner with Royal Challengers Bangalore for The RCB Podcast — Game Changers.</p>
+                            </div>
+                            <div class="author">
+                                <p>By Royal Challengers Bangalore</p>
+                            </div>
+                        </div>
+                        <div class="playBtn">
+                            <button>
+                                <i class="bi bi-play-circle"></i>
+                                Play
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="player">
+            <div class="info"></div>
+            <div class="seek"></div>
+            <div class="controls"></div>
+            <audio class="audio" controls src="">
+                <a href="/media/cc0-audio/t-rex-roar.mp3"> Download audio </a>
+        </div>
+    </div>
+    
+    <!-- <script src="backchodi.js"></script> -->
+    <script src="player.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

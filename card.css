@@ -1,0 +1,58 @@
+.main-card{
+    height: 400px;
+    padding: 20px 0px; 
+    border-radius: 60px;
+    text-align: center;
+    color: white;
+}
+
+.card-div{
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+}
+
+.card{
+    height: 300px;
+    width: 250px;
+    background-color: whitesmoke;
+    border-radius: 40px;
+    margin: 15px;
+}
+
+.card:hover{
+    scale: 1.1;
+}
+
+.card img{
+    height: 80%;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+    height: 50px;
+    font-size: 18px;
+    animation: justify-content 3s linear;
+}
+
+#play{
+    border: none; 
+    font-size: 30px;
+    background-color:transparent;
+    visibility: hidden;
+}
+
+.card:hover .card-footer{
+    justify-content: space-around;
+    padding-left: 0px;
+}
+
+.card:hover #play{
+    visibility: visible;
+}

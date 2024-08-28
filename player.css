@@ -1,0 +1,36 @@
+.player{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* audio::-webkit-media-controls-play-button,
+     audio::-webkit-media-controls-panel {
+      /* background-color: blue; */
+     /* color: blue; */
+/*}*/
+
+/* .player audio{
+    display: none;
+} */
+
+.player audio[controls] {
+    display: block;
+    width: 100%;
+    /* background-color: blue;  */
+    background-color: #f1f3f4; 
+    color: red;
+}
+
+
+/* audio::-webkit-media-controls-panel{
+    background-color: #222428;
+} */
+
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-play-button{
+    /* background-color: cyan; */
+    /* color: white; */
+    border-radius: 50%;
+}
+
